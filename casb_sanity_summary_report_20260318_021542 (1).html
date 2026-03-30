@@ -1,0 +1,247 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>CASB Basic Sanity - Test Execution Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                background-color: #f5f5f5;
+            }
+            .header {
+                background-color: #d32f2f;
+                color: white;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .section {
+                background-color: white;
+                padding: 20px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .stats {
+                display: flex;
+                justify-content: space-around;
+                margin: 20px 0;
+            }
+            .stat-box {
+                text-align: center;
+                padding: 15px;
+                background-color: #f5f5f5;
+                border-radius: 5px;
+                min-width: 150px;
+            }
+            .stat-number {
+                font-size: 2em;
+                font-weight: bold;
+                color: #1976d2;
+            }
+            .stat-label {
+                color: #666;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 10px;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 12px;
+                text-align: left;
+            }
+            th {
+                background-color: #1976d2;
+                color: white;
+                font-weight: bold;
+            }
+            .pass-row {
+                background-color: #e8f5e9;
+            }
+            .fail-row {
+                background-color: #ffebee;
+            }
+            tr:hover {
+                background-color: #f5f5f5;
+            }
+            .timestamp {
+                color: #666;
+                font-size: 0.9em;
+            }
+            .success {
+                color: #4caf50;
+                font-weight: bold;
+            }
+            .error {
+                color: #d32f2f;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>🎯 CASB Basic Sanity - Test Execution Report</h1>
+            <p class="timestamp">Generated: 2026-03-18 02:15:42</p>
+            <p>Setup: ZS3</p>
+        </div>
+
+        <div class="section">
+            <h2>📋 Overall Status</h2>
+            <h3 class="error">10 APPLICATION(S) FAILED ❌</h3>
+
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-number">17</div>
+                    <div class="stat-label">Total Applications</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" style="color: #4caf50;">7</div>
+                    <div class="stat-label">Passed</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" style="color: #d32f2f;">10</div>
+                    <div class="stat-label">Failed</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📊 Detailed Test Results</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Application</th>
+                        <th>DLP (File)</th>
+                        <th>DLP (Message)</th>
+                        <th>Malware</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                <tr class="pass-row">
+                    <td><strong>GMAIL</strong></td>
+                    <td>✅ Pass</td>
+                    <td>➖ N/A</td>
+                    <td>✅ Pass</td>
+                </tr>
+                <tr class="fail-row">
+                    <td><strong>EXCHANGE</strong></td>
+                    <td>✅ Pass</td>
+                    <td>➖ N/A</td>
+                    <td>❌ Fail(Error in file Uploading)</td>
+                </tr>
+                <tr class="pass-row">
+                    <td><strong>SHAREPOINT</strong></td>
+                    <td>✅ Pass</td>
+                    <td>➖ N/A</td>
+                    <td>✅ Pass</td>
+                </tr>
+                <tr class="fail-row">
+                    <td><strong>GOOGLEDRIVE</strong></td>
+                    <td>✅ Pass</td>
+                    <td>➖ N/A</td>
+                    <td>❌ Fail (Not getting a hit)</td>
+                </tr>
+                <tr class="pass-row">
+                    <td><strong>BOX</strong></td>
+                    <td>✅ Pass</td>
+                    <td>➖ N/A</td>
+                    <td>✅ Pass</td>
+                </tr>
+                <tr class="pass-row">
+                    <td><strong>DROPBOX</strong></td>
+                    <td>✅ Pass</td>
+                    <td>➖ N/A</td>
+                    <td>✅ Pass</td>
+                </tr>
+                <tr class="fail-row">
+                    <td><strong>CONFLUENCE</strong></td>
+                    <td>❌ Fail(Tenant not validated)</td>
+                    <td>➖ N/A</td>
+                    <td>❌ Fail(Tenant not validated)</td>
+                </tr>
+                <tr class="pass-row">
+                    <td><strong>MSTEAM</strong></td>
+                    <td>✅ Pass</td>
+                    <td>✅ Pass</td>
+                    <td>✅ Pass</td>
+                </tr>
+                <tr class="fail-row">
+                    <td><strong>SLACK</strong></td>
+                    <td>✅ Pass</td>
+                    <td>❌ Fail (Not getting a hit)</td>
+                    <td>✅ Pass</td>
+                </tr>
+                <tr class="pass-row">
+                    <td><strong>WEBEX</strong></td>
+                    <td>✅ Pass</td>
+                    <td>✅ Pass</td>
+                    <td>✅ Pass</td>
+                </tr>
+                <tr class="fail-row">
+                    <td><strong>JIRA</strong></td>
+                    <td>✅ Pass</td>
+                    <td>❌ Fail (Not getting a hit)</td>
+                    <td>✅ Pass</td>
+                </tr>
+                <tr class="fail-row">
+                    <td><strong>AWSS3</strong></td>
+                    <td>❌ Fail (Tenant not onboarded)</td>
+                    <td>➖ N/A</td>
+                    <td>❌ Fail(Tenant not onboarded)</td>
+                </tr>
+                <tr class="pass-row">
+                    <td><strong>GCPSTORAGE</strong></td>
+                    <td>✅ Pass</td>
+                    <td>➖ N/A</td>
+                    <td>✅ Pass</td>
+                </tr>
+                <tr class="fail-row">
+                    <td><strong>AZUREBLOB</strong></td>
+                    <td>❌ Fail (Tenant not onboarded)</td>
+                    <td>➖ N/A</td>
+                    <td>❌ Fail(Tenant not onboarded)</td>
+                </tr>
+                <tr class="fail-row">
+                    <td><strong>GITHUB</strong></td>
+                    <td>❌ Fail (Not getting any logs)</td>
+                    <td>➖ N/A</td>
+                    <td>❌ Fail (Not getting any logs)</td>
+                </tr>
+                <tr class="fail-row">
+                    <td><strong>BITBUCKET</strong></td>
+                    <td>✅ Pass</td>
+                    <td>➖ N/A</td>
+                    <td>❌ Fail (Not getting a hit)</td>
+                </tr>
+                <tr class="fail-row">
+                    <td><strong>GITLAB</strong></td>
+                    <td>❌ Fail (Error in Scan configuration)</td>
+                    <td>➖ N/A</td>
+                    <td>❌ Fail (Error in Scan configuration)</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>🏗️ Build Information</h2>
+            <p><strong>SMCA Build:</strong> 6.2r.2603.0.0_prod.30.837effad8_114</p>
+            <p><strong>SMCASB Build:</strong> 6.2r.2603.0.0_prod.25.b8bc3d995_114</p>
+            <p><strong>SMDLP Build:</strong> 6.2r.2603.0.0_prod.30.837effad8_114</p>
+            <p><strong>Skywalker Build:</strong> release_6.2r.2603_prod_3a484ae1efb8aeda4fb0b8751a4a964adb5dda09_39</p>
+        </div>
+
+        <div class="section">
+            <h2>📝 Test Configuration</h2>
+            <p><strong>Scan Start Date:</strong> 17-03-2026 (for apps with file upload), 16-02-2026 (others)</p>
+            <p><strong>Application Scope:</strong> EXCHANGE, GMAIL, BOX, GOOGLEDRIVE, SHAREPOINT, SLACK, WEBEX, MSTEAM, CONFLUENCE, GITHUB, BITBUCKET, AWSS3, GCPSTORAGE, AZUREBLOB, JIRA, GITLAB, DROPBOX</p>
+            <p><strong>Interval:</strong> 14 minutes</p>
+        </div>
+    </body>
+    </html>
+    
